@@ -1,0 +1,137 @@
+body {
+	background: rgb(32, 99, 185); 
+    font-family: 'Bebas Neue',cursive;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+}
+
+#board{
+    display: inherit;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+#input_container{
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    margin: 2rem;
+
+}
+
+h1#messageArea {
+	color: rgb(255, 255, 255);
+    font-family:inherit;
+    font-size: 5rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    text-shadow: 0 0.1em black, 0 0.2em rgba(0, 0, 0, 0.4);
+}
+
+table {
+    background: white;
+    box-shadow: 0 0.4em black, 0 0.7em rgba(0, 0, 0, 0.4);
+    border-collapse:separate;
+    border-radius:10px;
+    -moz-border-radius:6px;
+	border-spacing: 0;
+    margin: 2rem;
+}
+
+td, th {
+    border-left:solid black 2px;
+    border-top:solid black 2px;
+}
+
+th {
+    border-top: none;
+}
+
+td:first-child, th:first-child {
+     border-left: none;
+}
+
+tr {
+	height: 4rem;
+}
+
+td {
+	width: 4rem;
+	height: 4rem;
+}
+
+form {
+    display: flex;
+    flex-flow: column wrap;
+    font-family: 'Roboto', sans-serif;
+}
+
+#guessInput {
+    width: 90%;
+    align-self: center;
+	background-color: white;
+    border: none;
+	border-radius:0.5rem;
+	font-size: 1.5em;
+    margin-bottom: 1rem;
+    border: 2px solid black;
+    border-radius: 0.5rem;
+    box-shadow: 0 0.2em black, 0 0.4em rgba(0, 0, 0, 0.4);
+}
+
+#fireButton{
+    align-self: center;
+    border: none;
+    background-color: #9a0d0d;
+    width: 5rem;
+    height: 5rem;
+    border-radius:0.5rem;
+    font-family: inherit;
+    font-size: 1.2rem;
+    font-weight: 800;
+    color: 	black;
+    text-transform: uppercase;
+    text-decoration: none;
+    margin: 1rem;
+    padding: 0.5rem;
+    border: 2px solid black;
+    border-radius: 0.5rem;
+    box-shadow: 0 0.6em black, 0 0.9em rgba(0, 0, 0, 0.4);
+
+    position: relative;
+    top: 0;
+    transition: all 200ms ease-in-out;
+}
+
+#fireButton:hover {
+    background:#b20a0a ;
+    color: rgb(14, 14, 14);
+
+    top: 0.2em;
+    box-shadow: 0 0.4em black, 0 0.7em rgba(0, 0, 0, 0.4);
+  }
+
+#fireButton:active{
+    background: red;
+    top: 0.4em;
+    box-shadow: 0 0.2em black, 0 0.5em rgba(0, 0, 0, 0.4);
+    
+    transition: 15ms ease-in-out;
+}
+
+caption{
+    margin-bottom: 0.5rem;
+    text-align: end;
+    font-size: 1.2rem;
+}
+
+.legend{
+    height: 0.8rem;
+    width: 0.8rem;
+    margin-bottom: 0.1rem;
+    
+}
+input{
+    outline:none;
+ }
