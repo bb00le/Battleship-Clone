@@ -1,0 +1,94 @@
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="initial-scale=1, user-scalable=0">
+		<title>Battle Ship by Bruno Bule</title>
+		<link rel="stylesheet" type="text/css" href="css/MUP_css.css">
+		<link rel="preconnect" href="https://fonts.gstatic.com">
+		<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto&display=swap" rel="stylesheet">
+	</head>
+
+	<body>
+		<div id="board">
+			<div class="title">
+				<h1 id="messageArea">Battleboats</h1>
+			</div>
+
+
+			<div class="gamecont">
+				<div class="formcont">
+					<form>
+					
+						<input type="text" id="guessInput" placeholder="A0" autofocus class="form-control">
+					
+					
+						<input type="button" id="fireButton" value="FIRE" class="btn btn-danger">
+					
+						
+					</form>
+				</div>
+				
+			
+				
+				<!-- battleship table -->
+				
+				<div class="tablecont">
+					<div class="rowTags">
+						<div class="A">A</div>
+						<div class="B">B</div>
+						<div class="C">C</div>
+						<div class="D">D</div>
+						<div class="E">E</div>
+						<div class="F">F</div>
+						<div class="G">G</div>
+					</div>	
+					<table>
+						<caption>Neutral <img class="legend" src="https://www.colorhexa.com/ffffff.png"> Miss <img class="legend" src="https://www.colorhexa.com/808080.png"> Hit <img class="legend" src="https://www.colorhexa.com/ff0000.png"></caption>
+						<!-- battleship row 0 -->
+						<tr>
+							<th id="00"></th><th id="01"></th><th id="02"></th><th id="03"></th><th id="04"></th><th id="05"></th><th id="06"></th>
+						</tr>
+						<!-- battleship row 1 -->
+						<tr>
+							<td id="10"></td><td id="11"></td><td id="12"></td><td id="13"></td><td id="14"></td><td id="15"></td><td id="16"></td>
+						</tr>
+						<!-- battleship row 2 -->
+						<tr>
+							<td id="20"></td><td id="21"></td><td id="22"></td><td id="23"></td><td id="24"></td><td id="25"></td><td id="26"></td>
+						</tr>
+						<!-- battleship row 3 -->
+						<tr>
+							<td id="30"></td><td id="31"></td><td id="32"></td><td id="33"></td><td id="34"></td><td id="35"></td><td id="36"></td>
+						</tr>
+						<!-- battleship row 4 -->
+						<tr>
+							<td id="40"></td><td id="41"></td><td id="42"></td><td id="43"></td><td id="44"></td><td id="45"></td><td id="46"></td>
+						</tr>
+						<!-- battleship row 5 -->
+						<tr>
+							<td id="50"></td><td id="51"></td><td id="52"></td><td id="53"></td><td id="54"></td><td id="55"></td><td id="56"></td>
+						</tr>
+						<!-- battleship row 6 -->
+						<tr>
+							<td id="60"></td><td id="61"></td><td id="62"></td><td id="63"></td><td id="64"></td><td id="65"></td><td id="66"></td>
+						</tr>
+					</table>
+				</div>
+			</div>
+			<div class="colTags">
+				<span class="0">0</span>
+				<span class="1">1</span>
+				<span class="2">2</span>
+				<span class="3">3</span>
+				<span class="4">4</span>
+				<span class="5">5</span>
+				<span class="6">6</span>
+			</div>			
+		</div>
+
+		<script src="js/MUP_js.js"></script>
+
+	</body>
+
+</html>

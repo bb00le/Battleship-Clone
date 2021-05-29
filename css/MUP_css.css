@@ -1,32 +1,46 @@
 body {
 	background: rgb(32, 99, 185); 
     font-family: 'Bebas Neue',cursive;
-    display: flex;
-    flex-flow: column wrap;
-    justify-content: center;
 }
 
 #board{
     display: inherit;
-    flex-flow: row wrap;
+    flex-flow: column wrap;
     justify-content: center;
+    margin-top: 4rem;
+    width: 100%;
 }
 
-#input_container{
-    display: flex;
-    flex-flow: column;
-    justify-content: center;
-    margin: 2rem;
-
+.title{
+    width: 100%;
 }
 
 h1#messageArea {
 	color: rgb(255, 255, 255);
     font-family:inherit;
-    font-size: 5rem;
+    font-size: 7rem;
     text-align: center;
     margin-bottom: 2rem;
     text-shadow: 0 0.1em black, 0 0.2em rgba(0, 0, 0, 0.4);
+    
+}
+
+.gamecont{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content:center;
+    
+}
+.formcont{
+    width: 50%;
+    margin-top: 5rem;
+    align-self: top;
+}
+.tablecont{
+    width:50%;
+    align-self: center;
+    display: flex;
+    flex-flow: row;
 }
 
 table {
@@ -36,7 +50,8 @@ table {
     border-radius:10px;
     -moz-border-radius:6px;
 	border-spacing: 0;
-    margin: 2rem;
+    margin: auto;
+    
 }
 
 td, th {
@@ -53,12 +68,12 @@ td:first-child, th:first-child {
 }
 
 tr {
-	height: 4rem;
+	height: 5rem;
 }
 
 td {
-	width: 4rem;
-	height: 4rem;
+	width: 5rem;
+	height: 5rem;
 }
 
 form {
@@ -68,7 +83,7 @@ form {
 }
 
 #guessInput {
-    width: 90%;
+    width: 20rem;
     align-self: center;
 	background-color: white;
     border: none;
@@ -101,7 +116,7 @@ form {
 
     position: relative;
     top: 0;
-    transition: all 200ms ease-in-out;
+    transition: all 350ms ease-in-out;
 }
 
 #fireButton:hover {
@@ -117,7 +132,7 @@ form {
     top: 0.4em;
     box-shadow: 0 0.2em black, 0 0.5em rgba(0, 0, 0, 0.4);
     
-    transition: 15ms ease-in-out;
+    transition: 100ms ease;
 }
 
 caption{
@@ -125,7 +140,17 @@ caption{
     text-align: end;
     font-size: 1.2rem;
 }
-
+.rowTags{
+    margin-top: 3rem;
+    height:100%;
+    font-size: 3.8rem;
+}
+.colTags{
+    display: flex;
+    justify-content:flex-end;
+    font-size: 3.8rem;
+    margin-right: 3rem;
+}
 .legend{
     height: 0.8rem;
     width: 0.8rem;
@@ -135,3 +160,42 @@ caption{
 input{
     outline:none;
  }
+
+ .hit{
+     background-color: rgba(255, 0, 0, 0.616);
+ }
+ .miss{
+     background-color: rgba(128, 128, 128, 0.459);
+ }
+
+ @media only screen and (max-width: 1000px) {
+    .gamecont{
+        display: flex;
+        flex-flow: column wrap;
+    }
+    .formcont{
+        width: 100%;
+        align-self: center;
+        margin-bottom: 2rem;
+    }
+    .tablecont{
+        width: 100%;
+        align-self: center;
+    }
+    form {
+        flex-flow: row wrap;
+        justify-content: space-evenly;
+    }
+    caption{
+        font-size: 2rem;
+    }
+    #fireButton{
+        width: 8rem;
+        height: 8rem;
+        font-size: 2rem;
+    }
+    #guessInput{
+        height: 3rem;
+        align-self: center;
+    }
+  }
