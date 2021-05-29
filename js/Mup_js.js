@@ -1,4 +1,6 @@
-// JavaScript Model
+let hits=0;
+
+
 var model = {
     boardSize: 7,
     numShips: 3,
@@ -22,22 +24,24 @@ var model = {
 				alert("Oops, you already hit that location");
 				return true;
 			} else if ( index >= 0 ) {
+				hits++;
+				console.log(hits);
 				ship.hits[index] = "hit";
 				view.displayHit(guess);
 				view.displayMessage("HIT!");
-                setTimeout(function() { view.displayMessage("BATTLEBOATS"); }, 5000);
+                
 				if ( this.isSunk(ship) ) {
 					view.displayMessage("You sank my battleship!");
 					this.shipsSunk++;
-                    setTimeout(function() { view.displayMessage("BATTLEBOATS"); }, 5000);
+                    
 				}
 				return true;
 			}
 			document.getElementById("guessInput").focus();
 		}
+		
 		view.displayMiss(guess);
 		view.displayMessage("You Missed");
-        setTimeout(function() { view.displayMessage("BATTLEBOATS"); }, 5000);
 		return false;
 	},
 
@@ -119,7 +123,7 @@ var view = {
 var controller = {
 	guesses: 0,
 
-	processGuess: function(guess) {
+	processGuess: async function(guess) {
 		var location = parseGuess(guess);
 
 		if (location) {
@@ -127,7 +131,16 @@ var controller = {
 			var hit = model.fire(location);
 			if (hit && model.shipsSunk === model.numShips) {
 				view.displayMessage("You sank all my battleships, in " + this.guesses + " guesses");
-                setTimeout(function() { view.displayMessage("BATTLEBOATS"); }, 5000);
+                const playerData={
+					accuracy:(hits/this.guesses).toFixed(2),
+					username:localStorage.getItem("user")
+				}
+				localStorage.setItem("player",JSON.stringify(playerData));
+				var rmDiv=document.getElementById('frmcnt')
+				rmDiv.remove();
+
+				await new Promise(r => setTimeout(r, 5000));
+				window.location.href='/main-menu.html'
 			}
 		}
 	}
@@ -186,3 +199,5 @@ function init() {
 	// place the ships on the game board
 	model.generateShipLocations();
 }
+
+console.log(localStorage.getItem("user"));

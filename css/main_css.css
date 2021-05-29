@@ -1,0 +1,133 @@
+body {
+	background: rgb(32, 99, 185); 
+    font-family: 'Bebas Neue',cursive;
+}
+
+h1.messageArea {
+	color: rgb(255, 255, 255);
+    font-family:inherit;
+    font-size: 7rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    text-shadow: 0 0.1em black, 0 0.2em rgba(0, 0, 0, 0.4);
+    
+}
+
+.userNameForm{
+    display: flex;
+    flex-flow: column wrap;
+    justify-content:center;
+    
+}
+
+form{
+    display: inherit;
+    flex-flow: column wrap;
+    justify-content: space-evenly;
+    width: 30rem;
+    height: 10rem;
+}
+
+.userNameInput{
+    display: inherit;
+    flex-flow: row wrap;
+    justify-content: center;
+    height: 3rem;
+    padding-bottom: 2rem;
+    
+}
+.textInput{
+    height: 2rem;
+    align-self: center;
+    border-radius:0.5rem;
+   
+}
+
+p{
+    color: white;
+    font-size: 2rem;
+    padding-right: 1rem;
+    text-shadow: 0 0.1em black, 0 0.2em rgba(0, 0, 0, 0.4);
+}
+
+a{
+    align-self: center;
+}
+
+.startButton{
+    border: none;
+    background-color: #9a0d0d;
+    border-radius:0.5rem;
+    font-family: inherit;
+    font-size: 1.2rem;
+    font-weight: 800;
+    color: 	black;
+    text-transform: uppercase;
+    
+    text-decoration: none;
+    margin: 1rem;
+    padding: 0.5rem;
+    border: 2px solid black;
+    border-radius: 0.5rem;
+    box-shadow: 0 0.6em black, 0 0.9em rgba(0, 0, 0, 0.4);
+
+    width: 10rem;
+    align-self: center;
+    height: 2.5rem;
+
+    position: relative;
+    top: 0;
+
+    transition: all 350ms ease-in-out;
+}
+
+.startButton:hover {
+    background:#b20a0a ;
+    color: rgb(14, 14, 14);
+
+    top: 0.2em;
+    box-shadow: 0 0.4em black, 0 0.7em rgba(0, 0, 0, 0.4);
+  }
+
+.startButton:active{
+    background: red;
+    top: 0.4em;
+    box-shadow: 0 0.2em black, 0 0.5em rgba(0, 0, 0, 0.4);
+    
+    transition: 100ms ease;
+}
+
+.menuCont{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+.scoreboardTable {
+    font-size: 1.5rem;
+    padding: 0;
+    margin: auto;
+    border-collapse: collapse;
+    width: 30rem;
+    text-align: center;
+    color: white;
+    text-shadow: 0 0.1em black, 0 0.2em rgba(0, 0, 0, 0.4);
+}
+
+.scoreboardTableHeaderRow {
+    color: white;
+    font-weight: bold;
+    height: 50px;
+}
+
+.scoreboardTableBodyRow:nth-child(odd){
+    background-color: rgba(128, 128, 128, 0.050);
+}
+
+#latestUserScore {
+    background-color: crimson;
+}
+
+.scoreboardTable tr td {
+    height: 25px;
+}

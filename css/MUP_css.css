@@ -37,7 +37,6 @@ h1#messageArea {
     align-self: top;
 }
 .tablecont{
-    width:50%;
     align-self: center;
     display: flex;
     flex-flow: row;
@@ -47,8 +46,6 @@ table {
     background: white;
     box-shadow: 0 0.4em black, 0 0.7em rgba(0, 0, 0, 0.4);
     border-collapse:separate;
-    border-radius:10px;
-    -moz-border-radius:6px;
 	border-spacing: 0;
     margin: auto;
     
@@ -147,10 +144,17 @@ caption{
 }
 .colTags{
     display: flex;
-    justify-content:flex-end;
-    font-size: 3.8rem;
-    margin-right: 3rem;
+    justify-content: space-evenly;
+    width: 100%;
+    font-size: 5rem;
+    margin-left: 1.5rem;
+    
 }
+
+.col{
+    width: 4rem;
+}
+
 .legend{
     height: 0.8rem;
     width: 0.8rem;
@@ -168,7 +172,9 @@ input{
      background-color: rgba(128, 128, 128, 0.459);
  }
 
- @media only screen and (max-width: 1000px) {
+
+
+ @media only screen and (max-width: 1240px) {
     .gamecont{
         display: flex;
         flex-flow: column wrap;
@@ -179,7 +185,6 @@ input{
         margin-bottom: 2rem;
     }
     .tablecont{
-        width: 100%;
         align-self: center;
     }
     form {
@@ -197,5 +202,13 @@ input{
     #guessInput{
         height: 3rem;
         align-self: center;
+    }
+    .colTags{
+        justify-content: center;
+        padding-left: 1rem;
+    }
+    
+    .col{
+        width: 5.5rem;
     }
   }
