@@ -19,7 +19,7 @@ var model = {
 			var ship = this.ships[i];
 			var index = ship.locations.indexOf(guess);
 
-			// check if a ship location has already been hit
+			
 			if ( ship.hits[index] === "hit" ) {
 				alert("Oops, you already hit that location");
 				return true;
@@ -69,10 +69,10 @@ var model = {
 		var direction = Math.floor(Math.random() * 2);
 		var row, col;
 
-		if (direction === 1) { // horizontal
+		if (direction === 1) { 
 			row = Math.floor(Math.random() * this.boardSize);
 			col = Math.floor(Math.random() * (this.boardSize - this.shipLength + 1));
-		} else { // vertical
+		} else {
 			row = Math.floor(Math.random() * (this.boardSize - this.shipLength + 1));
 			col = Math.floor(Math.random() * this.boardSize);
 		}
@@ -146,12 +146,12 @@ var controller = {
 	}
 };
 
-// helper function to parse a guess from the user
+
 function parseGuess(guess) {
 	var alphabet = ["A", "B", "C", "D", "E", "F", "G"];
 
 	if (guess === null || guess.length !== 2) {
-		//alert("Oops, please enter a letter and a number on the board.");
+		alert("Oops, please enter a letter and a number on the board.");
 	} else {
 		var firstChar = guess.charAt(0);
 		var row = alphabet.indexOf(firstChar);
@@ -167,7 +167,7 @@ function parseGuess(guess) {
 	return null;
 }
 
-// event handlers
+
 function handleFireButton() {
 	var guessInput = document.getElementById("guessInput");
 	var guess = guessInput.value.toUpperCase();
@@ -177,8 +177,6 @@ function handleFireButton() {
 
 function handleKeyPress(e) {
 	var fireButton = document.getElementById("fireButton");
-	// in IE9 and earlier, the event object doesn't get passed
-	// to the event handler correctly, so we use window.event instead.
 	e = e || window.event;
 	if (e.keyCode === 13) {
 		fireButton.click();
@@ -186,18 +184,16 @@ function handleKeyPress(e) {
 	}
 }
 
-// init - called when the page has completed loading
+
 window.onload = init;
 
 function init() {
-	// Fire! button onclick handler
+	
 	var fireButton = document.getElementById("fireButton");
 	fireButton.onclick = handleFireButton;
-	// handle "return" key press
+	
 	var guessInput = document.getElementById("guessInput");
 	guessInput.onkeypress = handleKeyPress;
-	// place the ships on the game board
+	
 	model.generateShipLocations();
 }
-
-console.log(localStorage.getItem("user"));
